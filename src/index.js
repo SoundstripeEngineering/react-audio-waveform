@@ -1,4 +1,4 @@
-import React, { PropTypes } from "react"
+import React from "react"
 import ReactDOM from "react-dom"
 import { isEqual } from "lodash"
 
@@ -13,27 +13,27 @@ class Waveform extends React.Component {
     progressColor: "#555555",
   }
 
-  static propTypes = {
-    barWidth: PropTypes.number,
-    duration: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-    onClick: PropTypes.func,
-    peaks: PropTypes.arrayOf(PropTypes.number.isRequired),
-    pixelRatio: PropTypes.number.isRequired,
-    pos: PropTypes.number.isRequired, // num of seconds
-    waveColor: PropTypes.string,
-    waveGradientColors: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
-      ).isRequired
-    ),
-    progressColor: PropTypes.string,
-    progressGradientColors: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
-      ).isRequired
-    ),
-  }
+  // static propTypes = {
+  //   barWidth: PropTypes.number,
+  //   duration: PropTypes.number.isRequired,
+  //   height: PropTypes.number.isRequired,
+  //   onClick: PropTypes.func,
+  //   peaks: PropTypes.arrayOf(PropTypes.number.isRequired),
+  //   pixelRatio: PropTypes.number.isRequired,
+  //   pos: PropTypes.number.isRequired, // num of seconds
+  //   waveColor: PropTypes.string,
+  //   waveGradientColors: PropTypes.arrayOf(
+  //     PropTypes.arrayOf(
+  //       PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
+  //     ).isRequired
+  //   ),
+  //   progressColor: PropTypes.string,
+  //   progressGradientColors: PropTypes.arrayOf(
+  //     PropTypes.arrayOf(
+  //       PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
+  //     ).isRequired
+  //   ),
+  // }
 
   constructor(props) {
     super(props)

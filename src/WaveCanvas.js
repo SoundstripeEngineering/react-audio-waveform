@@ -1,4 +1,4 @@
-import React, { PropTypes } from "react"
+import React from "react"
 import ReactDOM from "react-dom"
 import { isEqual } from "lodash"
 
@@ -14,19 +14,19 @@ class WaveCanvas extends React.Component {
       window.devicePixelRatio || screen.deviceXDPI / screen.logicalXDPI,
   }
 
-  static propTypes = {
-    barWidth: PropTypes.number,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-    peaks: PropTypes.arrayOf(PropTypes.number.isRequired),
-    pixelRatio: PropTypes.number.isRequired,
-    color: PropTypes.string,
-    gradientColors: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
-      ).isRequired
-    ),
-  }
+  // static propTypes = {
+  //   barWidth: PropTypes.number,
+  //   width: PropTypes.number.isRequired,
+  //   height: PropTypes.number.isRequired,
+  //   peaks: PropTypes.arrayOf(PropTypes.number.isRequired),
+  //   pixelRatio: PropTypes.number.isRequired,
+  //   color: PropTypes.string,
+  //   gradientColors: PropTypes.arrayOf(
+  //     PropTypes.arrayOf(
+  //       PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
+  //     ).isRequired
+  //   ),
+  // }
 
   componentDidUpdate = (prevProps) => {
     if (
