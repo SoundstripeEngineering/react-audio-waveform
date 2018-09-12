@@ -15,18 +15,18 @@ class Waveform extends React.Component {
 
   // static propTypes = {
   //   barWidth: PropTypes.number,
+  //   color: PropTypes.string,
   //   duration: PropTypes.number.isRequired,
+  //   gradientColors: PropTypes.arrayOf(
+  //     PropTypes.arrayOf(
+  //       PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
+  //     ).isRequired
+  //   ),
   //   height: PropTypes.number.isRequired,
   //   onClick: PropTypes.func,
   //   peaks: PropTypes.arrayOf(PropTypes.number.isRequired),
   //   pixelRatio: PropTypes.number.isRequired,
   //   pos: PropTypes.number.isRequired, // num of seconds
-  //   waveColor: PropTypes.string,
-  //   waveGradientColors: PropTypes.arrayOf(
-  //     PropTypes.arrayOf(
-  //       PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
-  //     ).isRequired
-  //   ),
   //   progressColor: PropTypes.string,
   //   progressGradientColors: PropTypes.arrayOf(
   //     PropTypes.arrayOf(
@@ -55,9 +55,9 @@ class Waveform extends React.Component {
     const posChanged = this.props.pos !== nextProps.pos
     const durationChanged = this.props.duration !== nextProps.duration
     const colorChanged =
-      this.props.waveColor !== nextProps.waveColor
+      this.props.color !== nextProps.color
     const gradientChanged =
-      !isEqual(this.props.waveGradientColors, nextProps.waveGradientColors)
+      !isEqual(this.props.gradientColors, nextProps.gradientColors)
     const progressColorChanged =
       this.props.progressColor !== nextProps.progressColor
     const progressGradientChanged =
@@ -152,7 +152,7 @@ class Waveform extends React.Component {
         <WaveCanvas
           color={this.props.color}
           barWidth={this.props.barWidth}
-          gradientColors={this.props.waveGradientColors}
+          gradientColors={this.props.gradientColors}
           peaks={this.props.peaks}
           width={this.state.waveWidth}
           height={this.state.waveHeight}
