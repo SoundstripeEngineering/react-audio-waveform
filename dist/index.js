@@ -33,18 +33,18 @@ var Waveform = function (_React$Component) {
 
   // static propTypes = {
   //   barWidth: PropTypes.number,
+  //   color: PropTypes.string,
   //   duration: PropTypes.number.isRequired,
+  //   gradientColors: PropTypes.arrayOf(
+  //     PropTypes.arrayOf(
+  //       PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
+  //     ).isRequired
+  //   ),
   //   height: PropTypes.number.isRequired,
   //   onClick: PropTypes.func,
   //   peaks: PropTypes.arrayOf(PropTypes.number.isRequired),
   //   pixelRatio: PropTypes.number.isRequired,
   //   pos: PropTypes.number.isRequired, // num of seconds
-  //   waveColor: PropTypes.string,
-  //   waveGradientColors: PropTypes.arrayOf(
-  //     PropTypes.arrayOf(
-  //       PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
-  //     ).isRequired
-  //   ),
   //   progressColor: PropTypes.string,
   //   progressGradientColors: PropTypes.arrayOf(
   //     PropTypes.arrayOf(
@@ -68,8 +68,8 @@ var Waveform = function (_React$Component) {
       var peaksChanged = !(0, _lodash.isEqual)(_this.props.peaks, nextProps.peaks);
       var posChanged = _this.props.pos !== nextProps.pos;
       var durationChanged = _this.props.duration !== nextProps.duration;
-      var colorChanged = _this.props.waveColor !== nextProps.waveColor;
-      var gradientChanged = !(0, _lodash.isEqual)(_this.props.waveGradientColors, nextProps.waveGradientColors);
+      var colorChanged = _this.props.color !== nextProps.color;
+      var gradientChanged = !(0, _lodash.isEqual)(_this.props.gradientColors, nextProps.gradientColors);
       var progressColorChanged = _this.props.progressColor !== nextProps.progressColor;
       var progressGradientChanged = !(0, _lodash.isEqual)(_this.props.progressGradientColors, nextProps.progressGradientColors);
       return stateChanged || peaksChanged || posChanged || durationChanged || colorChanged || gradientChanged || progressColorChanged || progressGradientChanged;
@@ -166,7 +166,7 @@ var Waveform = function (_React$Component) {
         _react2.default.createElement(_WaveCanvas2.default, {
           color: this.props.color,
           barWidth: this.props.barWidth,
-          gradientColors: this.props.waveGradientColors,
+          gradientColors: this.props.gradientColors,
           peaks: this.props.peaks,
           width: this.state.waveWidth,
           height: this.state.waveHeight
