@@ -126,7 +126,7 @@ var Waveform = function (_React$Component) {
         height: _this.props.height + "px",
         width: _this.progressWidth() + "px",
         display: "block",
-        transition: "width 200ms ease-in-out",
+        transition: "width " + _this.props.transitionDuration + "ms ease-in-out",
         boxSizing: "border-box"
       };
     };
@@ -200,5 +200,6 @@ Waveform.defaultProps = {
   height: 30,
   onClick: function onClick() {},
   pixelRatio: window.devicePixelRatio || screen.deviceXDPI / screen.logicalXDPI,
-  progressColor: "#555555" };
+  progressColor: "#555555",
+  transitionDuration: 200 };
 exports.default = Waveform;

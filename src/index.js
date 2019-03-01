@@ -11,6 +11,7 @@ class Waveform extends React.Component {
     pixelRatio:
       window.devicePixelRatio || screen.deviceXDPI / screen.logicalXDPI,
     progressColor: "#555555",
+    transitionDuration: 200,
   }
 
   // static propTypes = {
@@ -125,7 +126,7 @@ class Waveform extends React.Component {
       height: `${this.props.height}px`,
       width: `${this.progressWidth()}px`,
       display: "block",
-      transition: "width 200ms ease-in-out",
+      transition: `width ${this.props.transitionDuration}ms ease-in-out`,
       boxSizing: "border-box",
     }
   }
