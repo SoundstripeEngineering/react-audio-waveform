@@ -1,6 +1,6 @@
 {
   "name": "react-audio-waveform",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Put a description here",
   "main": "dist/index.js",
   "license": "MIT",
