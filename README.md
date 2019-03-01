@@ -43,3 +43,4 @@ import Waveform from "react-audio-waveform"
 | `pos` | The audio's current position in seconds | Number | `undefined` |
 | `progressColor`  | The progress waveform's color | String (hex value) | `undefined` |
 | `progressGradientColors`  | The progress waveform's color as an array of arrays containing start positions (from 0 to 1) and colors; example: `[[0, "#888888"], [1, "#aaaaaa"]]` | Array | `undefined` |
+| `transitionDuration` | Length in milliseconds of the waveform animation transition | Number | `200` |
