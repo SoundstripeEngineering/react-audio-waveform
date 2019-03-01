@@ -25,6 +25,7 @@ import Waveform from "react-audio-waveform"
   onClick={this.handleClick}
   color="#676767"
   progressGradientColors={[[0, "#888"], [1, "#aaa"]]}
+  transitionDuration={300}
 />
 ```
   
